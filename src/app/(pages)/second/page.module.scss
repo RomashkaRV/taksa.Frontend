@@ -1,0 +1,37 @@
+.page {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    & path {
+      stroke: var(--base-white);
+
+      fill: rgba(255, 255, 255, .1);
+
+      animation: text-animation 4s ease 0s infinite alternate none running;
+    }
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0, 50%;
+    stroke-width: 0.2;
+  }
+
+  20% {
+      //fill: rgba(var(--base-white), 0.2);
+      //stroke: rgb(var(--base-white));
+  }
+
+  100% {
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50%, 0;
+    stroke-width: 3;
+   }
+}

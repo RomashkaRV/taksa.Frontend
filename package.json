@@ -1,0 +1,59 @@
+{
+  "name": "Taksa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "quality": "npm run lint:ts && npm run lint:scss",
+    "quality:fix": "npm run lint:ts:fix && npm run lint:scss:fix",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "init:git": "git config core.autocrlf false && git config core.eol lf"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.14",
+    "@svgr/webpack": "^8.1.0",
+    "@tsparticles/all": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "classnames": "^2.5.1",
+    "gsap": "^3.12.7",
+    "next": "^14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-simple-typewriter": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.19",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "frontend.configs": "1.3.0",
+    "lint-staged": "15.2.0",
+    "sass": "^1.79.1",
+    "sass-loader": "^16.0.1",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "commitlint": {
+    "extends": "./node_modules/frontend.configs/commitlintrc.json"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/frontend.configs/eslintrc.js"
+  },
+  "stylelint": {
+    "extends": "./node_modules/frontend.configs/stylelintrc.json"
+  },
+  "prettier": {
+    "extends": "./node_modules/frontend.configs/prettier.json"
+  },
+  "lint-staged": {
+    "**/*.{scss}": "npm run lint:scss:fix",
+    "**/*.{ts,tsx}": "npm run lint:ts:fix"
+  }
+}
