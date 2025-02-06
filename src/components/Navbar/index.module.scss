@@ -1,0 +1,92 @@
+//.navbar {
+//  width: 100%;
+//  max-width: 1240px;
+//
+//  margin: 20px auto 0;
+//
+//  padding: 5px 12px;
+//
+//  position: relative;
+//
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//  gap: 20px;
+//
+//  z-index: 100;
+//
+//  //background-color: rgba(255, 0, 0, 0.2);
+//
+//  //background-color: var(--teal-50);
+//
+//  & a {
+//    cursor: none;
+//
+//    color: var(--base-white);
+//  }
+//}
+
+.tabsContainer {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 20px auto 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  z-index: 100;
+}
+
+.link {
+  padding: 5px 10px;
+
+  position: relative;
+
+  cursor: none;
+
+  //outline: 2px solid transparent;
+
+  border: none;
+  border-radius: 10px;
+
+  transition: color 0.3s ease;
+
+  background-color: transparent;
+
+  //color: white;
+
+  // Убираем синий фон на мобилках при клике
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus-visible {
+    outline-color: skyblue;
+  }
+}
+
+.active {
+  color: white;
+}
+
+.bubble {
+  position: absolute;
+
+  border-radius: 10px;
+
+  z-index: 10;
+
+  background-color: white;
+  inset: 0;
+  mix-blend-mode: difference;
+}
+

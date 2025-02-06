@@ -1,23 +1,11 @@
 @import "mixins/adaptive";
 
-.nav {
-  width: fit-content;
+.container {
+  max-width: 1240px;
 
   margin: 0 auto;
-  padding: 5px 12px;
 
-  position: relative;
-
-  display: flex;
-  gap: 20px;
-
-  z-index: 100;
-
-  background-color: #fff;
-
-  & a {
-    cursor: none;
-  }
+  background-color: red;
 }
 
 .number {

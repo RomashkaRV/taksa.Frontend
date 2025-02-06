@@ -10,6 +10,10 @@
 
   background-color: #45322E;
 
+  & h1 {
+    font-size: 7rem;
+  }
+
   & svg {
     & path {
       stroke: var(--base-white);
