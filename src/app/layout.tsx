@@ -1,10 +1,12 @@
 import { Golos_Text } from "next/font/google";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import React from "react";
 
-import { Cursor, ParticlesBack } from "components";
+import { Cursor, DachshundTrail, PageTransition } from "components";
 
 import HeadComponent from "./head";
+
 import "style/index.scss";
 
 const golos = Golos_Text({
@@ -20,9 +22,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Cursor />
 
-        <div className="container">{children}</div>
+        <div className="nav">
+          <Link href="/second">Second</Link>
 
-        <ParticlesBack />
+          <Link href="/">Home</Link>
+        </div>
+
+        <PageTransition>
+          <div>{children}</div>
+        </PageTransition>
+
+        {/*<ParticlesBack />*/}
+
+        <DachshundTrail />
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

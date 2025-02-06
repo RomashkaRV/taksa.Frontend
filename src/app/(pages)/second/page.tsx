@@ -15,6 +15,19 @@ export default function SecondPage() {
           fill="white"
         />
       </svg>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam,
+      architecto aspernatur at culpa cum doloremque doloribus ea esse et
+      explicabo facilis ipsam laboriosam, laborum maiores modi necessitatibus
+      neque nisi non odio omnis optio porro possimus praesentium quae quaerat
+      quam reiciendis sequi similique tenetur, unde vero voluptas voluptatem? A
+      aliquam consectetur consequatur delectus et fuga in nobis quisquam
+      repellendus soluta. Ab accusantium ad blanditiis corporis dolor dolorum
+      expedita illo ipsam iure iusto, labore magnam mollitia nobis numquam odio
+      porro quod rem, rerum sapiente sequi ut velit, voluptates? Dicta fugiat
+      hic laborum maxime praesentium? Ad culpa distinctio dolor doloremque
+      doloribus eos fugiat illo incidunt ipsum labore molestias nihil odio
+      perspiciatis praesentium quae quam quis rerum similique soluta, tempore
+      ullam vero voluptatum.
     </div>
   );
 }

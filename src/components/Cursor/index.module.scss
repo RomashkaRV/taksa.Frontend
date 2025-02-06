@@ -1,6 +1,6 @@
 .cursor {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
 
   position: fixed;
   top: 0;
@@ -8,11 +8,18 @@
 
   pointer-events: none;
 
+  //background-color: var(--base-white);
+
+  //background-color: var(--base-white);
+
+  transform: rotate(-30deg);
+
   border-radius: 50%;
 
   z-index: 9999;
 
-  background-color: var(--base-white);
+  //background-image: url("assets/paw.svg");
+  background-repeat: no-repeat;
 
   mix-blend-mode: difference;
 

@@ -1,24 +1,24 @@
 "use client";
 
-import { useTypewriter } from "react-simple-typewriter";
+// import { TypingText } from "./_components";
 
 import style from "./page.module.scss";
 
 export default function MainPage() {
-  const [text] = useTypewriter({
-    words: ["Taksa", "Developer", "Manager", "Gamer"],
-    loop: true,
-    typeSpeed: 120,
-    delaySpeed: 2000
-  });
-
   return (
     <div className={style.page}>
-      <div className={style.content}>
-        <p className={style.title}>
-          I'm a <span>{text}</span>
-        </p>
-      </div>
+      {/*<TypingText />*/}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus
+      provident sunt voluptatum? Aperiam aspernatur consectetur cumque deleniti
+      dolores esse laboriosam laudantium, minima modi molestiae neque nostrum
+      numquam quam quibusdam quis, quod, totam. At atque aut consequuntur
+      deserunt distinctio fugiat in ipsum iure molestiae perspiciatis possimus
+      quam quasi qui reiciendis rerum, saepe sequi tenetur totam vel veniam. A
+      animi at aut, dolore doloremque ducimus eius error esse expedita in
+      magnam, perferendis reprehenderit sequi sint sit, soluta unde velit vero
+      vitae voluptatum! Ad alias amet aut consectetur, consequatur laborum nemo
+      porro praesentium quam ratione sint soluta sunt tempore temporibus vero
+      voluptatibus.
     </div>
   );
 }

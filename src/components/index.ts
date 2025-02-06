@@ -1,3 +1,4 @@
 export { Cursor } from "./Cursor";
 export { ParticlesBack } from "./ParticlesBack";
-export { Loader } from "./Loader";
+export { DachshundTrail } from "./PawTrail";
+export { PageTransition } from "./PageTransition";

@@ -1,98 +1,11 @@
 .page {
-  width: 100vw;
   height: 100vh;
 
-  padding: 0 20px;
-
-  position: relative;
+  padding: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 
-  .content {
-    padding: 10px 20px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.3);
-
-    color: var(--base-white);
-
-    background-color: #1c1c1c;
-  }
-
-  .title{
-    font-size: 48px;
-    font-weight: 600;
-
-    color: var(--base-white);
-  }
-
-  .title span {
-    position: relative;
-
-    color: #ff7f50;
-  }
-
-  //.title span::before{
-  //  //animation: words 20s infinite;
-  //  //content: "Taksa";
-  //
-  //  color: #ff7f50;
-  //}
-  //
-  //.title span::after{
-  //  width: calc(100% + 8px);
-  //  height: calc(100% + 10px);
-  //
-  //  position: absolute;
-  //  right: -8px;
-  //
-  //  animation: cursor .8s infinite, typing 20s steps(14) infinite;
-  //  content: "";
-  //
-  //  border-left: 2px solid #ff7f50;
-  //
-  //  background-color: #1c1c1c;
-  //}
-  //
-  //@keyframes cursor {
-  //  to {
-  //    border-left: 2px solid #ff7f5000;
-  //  }
-  //}
-  //
-  //@keyframes words {
-  //  0%,20%{
-  //    content: "Taksa";
-  //  }
-  //
-  //  21%,40%{
-  //    content: "Developer";
-  //  }
-  //
-  //  41%,60%{
-  //    content: "Manager";
-  //  }
-  //
-  //  61%,80%{
-  //    content: "Designer";
-  //  }
-  //
-  //  81%,100%{
-  //    content: "Gamer";
-  //  }
-  //}
-  //
-  //@keyframes typing {
-  //  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-  //    width: 0;
-  //  }
-  //
-  //  5%,20%,25%,40%,45%,60%,65%,80%,85%{
-  //    width: calc(100% + 8px);
-  //  }
-  //}
+  background-color: #45322E;
 }

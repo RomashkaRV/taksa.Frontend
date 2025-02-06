@@ -1,0 +1,45 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  z-index: 90;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  cursor: none;
+
+  transition: background 0.3s;
+
+  color: white;
+}
+
+.trail {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dogContainer {
+  position: absolute;
+  bottom: 0;
+
+  .dogImage {
+    width: 15rem;
+    height: 15rem;
+  }
+}
