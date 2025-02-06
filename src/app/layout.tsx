@@ -2,7 +2,13 @@ import { Golos_Text } from "next/font/google";
 import type { ReactNode } from "react";
 import React from "react";
 
-import { Cursor, DachshundTrail, PageTransition, Navbar } from "components";
+import {
+  Cursor,
+  DachshundTrail,
+  PageTransition,
+  Navbar,
+  Footer
+} from "components";
 
 import HeadComponent from "./head";
 
@@ -26,6 +32,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <PageTransition>{children}</PageTransition>
 
         <DachshundTrail />
+
+        <Footer />
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

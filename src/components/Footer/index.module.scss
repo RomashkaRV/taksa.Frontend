@@ -1,0 +1,53 @@
+.footer {
+  width: 100%;
+
+  margin: 0 auto;
+
+  position: fixed;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+
+  color: white;
+}
+
+.socialIcons {
+  width: fit-content;
+
+  margin-bottom: 10px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  border-radius: 30px;
+
+  background-color: #222;
+
+  & a {
+    width: 20px;
+    height: 20px;
+
+    cursor: none;
+
+    transition: color 0.3s;
+
+    color: white;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      color: #1da1f2;
+    }
+  }
+}

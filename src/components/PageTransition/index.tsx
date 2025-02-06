@@ -15,19 +15,19 @@ const getVariants = (direction: "left" | "right") => ({
     opacity: 0,
     scale: 1,
     x: direction === "right" ? "100%" : "-100%",
-    transition: { duration: 0.5 }
+    transition: { duration: 0.8 }
   },
   animate: {
     opacity: 1,
     scale: 1,
     x: 0,
-    transition: { duration: 0.5 }
+    transition: { duration: 0.8 }
   },
   exit: {
     opacity: 0,
-    scale: 0,
-    x: direction === "right" ? "100%" : "-100%",
-    transition: { duration: 0.5 }
+    scale: 0.3,
+    x: direction === "right" ? "-100%" : "100%",
+    transition: { duration: 0.8 }
   }
 });
 
