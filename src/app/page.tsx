@@ -1,7 +1,5 @@
 "use client";
 
-// import { TypingText } from "./_components";
-
 import style from "./page.module.scss";
 
 export default function MainPage() {
