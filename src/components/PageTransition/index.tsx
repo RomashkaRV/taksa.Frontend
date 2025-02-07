@@ -1,35 +1,20 @@
 "use client";
 
 import classNames from "classnames";
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { useEffect, useState, useRef } from "react";
 
 import style from "./index.module.scss";
+import { opacity, perspective, slide } from "./variants";
 
-const pagesOrder = ["/", "/about", "/projects", "/business"];
-
-const getVariants = (direction: "left" | "right") => ({
-  initial: {
-    opacity: 0,
-    scale: 1,
-    x: direction === "right" ? "100%" : "-100%",
-    transition: { duration: 0.8 }
-  },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    x: 0,
-    transition: { duration: 0.8 }
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.3,
-    x: direction === "right" ? "-100%" : "100%",
-    transition: { duration: 0.8 }
-  }
-});
+const anim = (variants: any) => {
+  return {
+    initial: "initial",
+    animate: "enter",
+    exit: "exit",
+    variants
+  };
+};
 
 type PageTransitionProps = {
   children: ReactNode;
@@ -40,34 +25,15 @@ export const PageTransition = ({
   children,
   className
 }: PageTransitionProps) => {
-  const pathname = usePathname();
-  const prevPathRef = useRef<string | null>(null); // Храним предыдущее значение
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-
-  useEffect(() => {
-    if (!isFirstLoad) {
-      prevPathRef.current = pathname;
-    }
-    setIsFirstLoad(false);
-  }, [pathname]);
-
-  const prevPath = prevPathRef.current;
-  const prevIndex = pagesOrder.indexOf(prevPath ?? "");
-  const currentIndex = pagesOrder.indexOf(pathname);
-  const direction = prevIndex < currentIndex ? "right" : "left";
-
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        className={classNames(style.pageTransition, className)}
-        initial={isFirstLoad ? false : getVariants(direction).initial}
-        animate={getVariants(direction).animate}
-        exit={getVariants(direction).exit}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        key={pathname}
-      >
-        {children}
+    <div className={classNames(style.inner)}>
+      <motion.div {...anim(slide)} className={style.slide} />
+
+      <motion.div {...anim(perspective)} className={classNames(style.page)}>
+        <motion.div {...anim(opacity)} className={style.opacity}>
+          {children}
+        </motion.div>
       </motion.div>
-    </AnimatePresence>
+    </div>
   );
 };

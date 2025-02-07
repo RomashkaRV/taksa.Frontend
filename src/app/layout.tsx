@@ -1,11 +1,14 @@
+"use client";
+
+import { AnimatePresence } from "framer-motion";
 import { Golos_Text } from "next/font/google";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import React from "react";
 
-import { Cursor, PageTransition, Navbar, Footer } from "components";
+import { Cursor, Navbar, Footer, PageTransition } from "components";
 
 import HeadComponent from "./head";
-
 import "style/index.scss";
 
 const golos = Golos_Text({
@@ -14,6 +17,8 @@ const golos = Golos_Text({
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+
   return (
     <html lang="en" className={golos.className}>
       <HeadComponent />
@@ -23,7 +28,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <Navbar />
 
-        <PageTransition>{children}</PageTransition>
+        <AnimatePresence mode="wait">
+          <PageTransition key={pathname}>{children}</PageTransition>
+        </AnimatePresence>
 
         {/*<DachshundTrail />*/}
 
