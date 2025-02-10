@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-import { AboutPage, HomePage } from "pages";
+import { AboutPage, BusinessPage, HomePage, ProjectsPage } from "pages";
 
 import { AnimatedWrapper } from "./_components/AnimatedWrapper";
 
@@ -25,6 +25,24 @@ export const MotionRoutes = () => {
           element={
             <AnimatedWrapper>
               <AboutPage />
+            </AnimatedWrapper>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <AnimatedWrapper>
+              <ProjectsPage />
+            </AnimatedWrapper>
+          }
+        />
+
+        <Route
+          path="/business"
+          element={
+            <AnimatedWrapper>
+              <BusinessPage />
             </AnimatedWrapper>
           }
         />

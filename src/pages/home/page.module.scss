@@ -1,11 +1,14 @@
 .page {
-  //h100vh
+  height: 100vh;
 
   padding: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  gap: 200px;
 
   background-color: #45322E;
 }
