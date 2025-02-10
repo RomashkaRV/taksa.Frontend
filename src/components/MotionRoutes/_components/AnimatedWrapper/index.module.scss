@@ -1,7 +1,7 @@
 .inner {
   background-color: var(--neutral-800);
 
-  .page {
+  .perspective {
     background-color: #45322E;
   }
 
@@ -17,4 +17,8 @@
 
     background-color: #45322E;
   }
+}
+
+.page {
+  height: 100vh;
 }

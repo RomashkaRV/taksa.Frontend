@@ -27,9 +27,12 @@ export const AnimatedWrapper = ({ children, className }: IProps) => (
 
     <motion.div
       {...anim(perspective)}
-      className={classNames(style.page, className)}
+      className={classNames(style.perspective)}
     >
-      <motion.div {...anim(opacity)} className={style.opacity}>
+      <motion.div
+        {...anim(opacity)}
+        className={classNames(style.page, className)}
+      >
         {children}
       </motion.div>
     </motion.div>
