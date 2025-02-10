@@ -1,6 +1,4 @@
-"use client";
-
-import style from "./page.module.scss";
+import style from "./index.module.scss";
 
 export default function AboutPage() {
   return (

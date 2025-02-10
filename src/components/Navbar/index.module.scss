@@ -1,3 +1,5 @@
+@import "style/mixins/typography";
+
 .tabsContainer {
   width: 100%;
 
@@ -22,7 +24,7 @@
 
   cursor: none;
 
-  //outline: 2px solid transparent;
+  @include h2;
 
   border: none;
   border-radius: 10px;
@@ -30,8 +32,6 @@
   transition: color 0.3s ease;
 
   background-color: transparent;
-
-  //color: white;
 
   // Убираем синий фон на мобилках при клике
   -webkit-tap-highlight-color: transparent;

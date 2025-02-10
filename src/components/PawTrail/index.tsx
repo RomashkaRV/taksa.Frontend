@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -54,7 +53,7 @@ export const DachshundTrail = () => {
 
   return (
     <div className={style.container}>
-      <Image
+      <img
         src={ISausage}
         onClick={addTrails}
         className={style.button}
@@ -76,7 +75,7 @@ export const DachshundTrail = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1, delay: trail.delay }}
           >
-            <Image src={IPaw} alt="paw" />
+            <img src={IPaw} alt="paw" />
           </motion.div>
         ))}
       </AnimatePresence>
@@ -90,7 +89,7 @@ export const DachshundTrail = () => {
             exit={{ bottom: -200, opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.8 }}
           >
-            <Image src={DogImage} alt="dog" className={style.dogImage} />
+            <img src={DogImage} alt="dog" className={style.dogImage} />
           </motion.div>
         )}
       </AnimatePresence>

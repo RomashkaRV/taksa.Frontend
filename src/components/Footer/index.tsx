@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import { IGitHub, IMail, ITelegram } from "./_assets";
 
@@ -26,7 +25,7 @@ export const Footer = () => {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Image src={icon} alt={id} />
+            <img src={icon} alt={id} />
           </motion.a>
         ))}
       </div>

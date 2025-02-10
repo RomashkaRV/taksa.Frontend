@@ -29,7 +29,7 @@
 
   border-radius: 30px;
 
-  background-color: #222;
+  background-color: var(--neutral-800);
 
   & a {
     width: 20px;
@@ -37,17 +37,9 @@
 
     cursor: none;
 
-    transition: color 0.3s;
-
-    color: white;
-
     & img {
       width: 100%;
       height: 100%;
-    }
-
-    &:hover {
-      color: #1da1f2;
     }
   }
 }

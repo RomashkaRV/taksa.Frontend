@@ -1,6 +1,5 @@
 "use client";
 import { gsap } from "gsap";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import IPaw from "assets/paw.svg";
@@ -33,7 +32,7 @@ export const Cursor = () => {
         const hoverElements = document.querySelectorAll("#click, a, button");
         hoverElements.forEach((element) => {
           const onMouseEnter = () => {
-            gsap.to(cursor, { scale: 3 });
+            gsap.to(cursor, { scale: 2 });
           };
           const onMouseLeave = () => {
             gsap.to(cursor, { scale: 1 });
@@ -70,5 +69,5 @@ export const Cursor = () => {
     return null; // Не рендерим курсор на мобильных устройствах
   }
 
-  return <Image src={IPaw} alt="paw" className={style.cursor} id="cursor" />;
+  return <img src={IPaw} alt="paw" className={style.cursor} id="cursor" />;
 };
