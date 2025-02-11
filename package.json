@@ -25,8 +25,11 @@
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "react-simple-typewriter": "^5.0.1",
-    "swiper": "^11.2.2",
-    "uuid": "^11.0.5"
+    "uuid": "^11.0.5",
+    "embla-carousel-react": "8.5.2",
+    "embla-carousel": "8.5.2",
+    "embla-carousel-autoplay": "8.5.2",
+    "embla-carousel-class-names": "8.5.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
