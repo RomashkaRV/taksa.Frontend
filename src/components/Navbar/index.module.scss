@@ -1,6 +1,6 @@
 @import "style/mixins/typography";
 
-.tabsContainer {
+.container {
   width: 100%;
 
   padding-top: 20px;
@@ -17,47 +17,61 @@
   z-index: 100;
 }
 
-.link {
-  padding: 5px 10px;
+.tabs {
+  display: flex;
+  align-items: center;
 
-  position: relative;
+  padding: 5px;
 
-  cursor: none;
+  border-radius: 30px;
+  background-color: var(--neutral-800);
 
-  @include h2;
 
-  border: none;
-  border-radius: 10px;
+  .link {
+    padding: 5px 10px;
 
-  transition: color 0.3s ease;
+    position: relative;
 
-  background-color: transparent;
+    cursor: none;
 
-  // Убираем синий фон на мобилках при клике
-  -webkit-tap-highlight-color: transparent;
+    @include h2;
 
-  &:hover {
-    color: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 10px;
+
+    transition: color 0.3s ease;
+
+
+    color: var(--base-white);
+
+    background-color: transparent;
+
+    // Убираем синий фон на мобилках при клике
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus-visible {
+      outline-color: skyblue;
+    }
+
+    &Active {
+      color: white;
+    }
+
+    .bubble {
+      position: absolute;
+
+      border-radius: 30px;
+
+      z-index: 10;
+
+      background-color: white;
+      inset: 0;
+      mix-blend-mode: difference;
+    }
   }
-
-  &:focus-visible {
-    outline-color: skyblue;
-  }
-}
-
-.active {
-  color: white;
-}
-
-.bubble {
-  position: absolute;
-
-  border-radius: 10px;
-
-  z-index: 10;
-
-  background-color: white;
-  inset: 0;
-  mix-blend-mode: difference;
 }
 
