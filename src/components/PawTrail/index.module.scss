@@ -9,7 +9,7 @@
 
   overflow: hidden;
 
-  z-index: 90;
+  //z-index: 90;
 }
 
 .button {
@@ -19,16 +19,18 @@
 
   cursor: none;
 
-  transition: background 0.3s;
+  z-index: 100;
 
   color: white;
 }
 
 .trail {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 
   position: absolute;
+
+  z-index: 100;
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -37,6 +39,8 @@
 .dogContainer {
   position: absolute;
   bottom: 0;
+
+  z-index: 100;
 
   .dogImage {
     width: 15rem;

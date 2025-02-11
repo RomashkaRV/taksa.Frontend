@@ -6,11 +6,11 @@ import { v4 as uuidv4 } from "uuid";
 
 import ISausage from "assets/icons/sausage.svg";
 import DogImage from "assets/images/dog.png";
-import IPaw from "assets/paw.svg";
+// import IPaw from "assets/paw.svg";
 
 import style from "./index.module.scss";
 
-export const DachshundTrail = () => {
+export const PawTrail = () => {
   const [trails, setTrails] = useState<
     { id: string; x: number; y: number; rotate: number; delay: number }[]
   >([]);
@@ -75,7 +75,7 @@ export const DachshundTrail = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1, delay: trail.delay }}
           >
-            <img src={IPaw} alt="paw" />
+            <img src={ISausage} alt="paw" />
           </motion.div>
         ))}
       </AnimatePresence>

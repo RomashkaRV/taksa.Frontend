@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { Cursor, Footer, Navbar } from "./components";
+import { Cursor, Footer, Navbar, PawTrail } from "./components";
 import { MotionRoutes } from "./components/MotionRoutes";
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
 
       <Router>
         <Navbar />
+
+        <PawTrail />
 
         <MotionRoutes />
 
